@@ -1,0 +1,49 @@
+{
+  "productName": "mybox",
+  "version": "0.1.0",
+  "identifier": "com.mybox.app",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "MyBox",
+        "width": 1280,
+        "height": 720,
+        "visible": false,
+		    "center": true,
+        "resizable": true
+      },
+      {
+        "label": "splashscreen",
+        "title": "启动中",
+        "width": 450,
+        "height": 300,
+        "visible": true,
+        "resizable": false,
+        "decorations": false,
+        "center": true,
+        "url": "/splashscreen.html"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
