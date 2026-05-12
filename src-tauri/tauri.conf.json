@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "MyBox",
+  "version": "0.1.0",
+  "identifier": "com.mybox.app",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "MyBox",
+        "width": 1280,
+        "height": 800,
+        "visible": false,
+		    "center": true,
+        "resizable": true,
+        "devtools": false
+      },
+      {
+        "label": "splashscreen",
+        "title": "启动中",
+        "width": 500,
+        "height": 360,
+        "visible": true,
+        "resizable": false,
+        "decorations": false,
+        "devtools": false,
+        "center": true,
+        "transparent": true,
+        "shadow": false,
+        "backgroundColor": "#00000000",
+        "url": "/splashscreen.html"
+      }
+    ],
+    "security": {
+      "csp": null     
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
